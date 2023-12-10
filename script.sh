@@ -1,0 +1,1 @@
+ruby -r './app/comment_collecter.rb' -e 'CommentCollecter.new.execute'
