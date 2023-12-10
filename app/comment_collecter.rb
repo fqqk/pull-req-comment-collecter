@@ -1,7 +1,6 @@
 require 'active_support/all'
 require 'dotenv/load'
 require 'date'
-require 'pry'
 
 require_relative 'github/api_client'
 require_relative 'google_spread_sheet/api_client'
