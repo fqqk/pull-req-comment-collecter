@@ -17,7 +17,6 @@ module GoogleSpreadSheet
     def write_to_spreadsheet(values)
       begin
         # Google ドライブに接続
-        binding.pry
         session = GoogleDrive::Session.from_service_account_key(@credentials_path)
         raise AuthorizeError unless session
         

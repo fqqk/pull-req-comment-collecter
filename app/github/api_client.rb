@@ -9,15 +9,14 @@ require_relative 'config'
 # @return [Array<Hash>] コメントハッシュ { content, url } を要素として持つ配列
 module GitHub
   class ApiClient
-    START_DATE = Date.new(2023, 11, 15)
-    END_DATE = Date.new(2023, 11, 30)
+    START_DATE = Date.today
+    END_DATE = START_DATE - 14
 
     def initialize(uname, token, repo_owner, repo_name, period = nil)
       @uname = uname
       @token = token
       @repo_owner = repo_owner
       @repo_name = repo_name
-      # @period = (Time.now - (14 * 24 * 60 * 60)).utc
 
       GitHub::Config.configure(@token) # Octokit.configure を呼び出す
     end
